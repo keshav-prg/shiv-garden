@@ -1,0 +1,1408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Shiv Garden Resort | Restaurant · Wedding Hall · Luxury Stay — Darbhanga</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+<!-- ============================================================
+     REAL PHOTOS FROM SHIV GARDEN RESORT (WedMeGood source)
+     Photo URLs used below throughout the page
+     ============================================================
+  P1: https://image.wedmegood.com/resized/800X/uploads/member/4174934/1680080227_Screenshot_55.jpg
+  P2: https://image.wedmegood.com/resized/800X/uploads/member/4174934/1680074518_2022_12_24.jpg
+  P3: https://image.wedmegood.com/resized/800X/uploads/member/4174934/1680074518_2022_02_04.jpg
+  P4: https://image.wedmegood.com/resized/800X/uploads/member/4174934/1680074517_2021_01_09.jpg
+  P5: https://image.wedmegood.com/resized/800X/uploads/member/4174934/1680074517_2019_09_22.jpg
+  P6: https://image.wedmegood.com/resized/800X/uploads/member/4174934/1680074517_IMG_20221202_181701.jpg
+  P7: https://image.wedmegood.com/resized/800X/uploads/member/4174934/1680074517_2022_12_28.jpg
+-->
+
+<style>
+/* ===============================================================
+   ROOT VARIABLES — Brand palette
+   =============================================================== */
+:root{
+  --saf:   #C8512A;
+  --gold:  #C4923A;
+  --glt:   #E8C46A;
+  --ivory: #FAF3E0;
+  --cream: #F2E6CC;
+  --dark:  #1A0F00;
+  --brn:   #3D1F00;
+  --mid:   #7A5A30;
+  --fh:    'Cormorant Garamond',serif;
+  --fb:    'Lato',sans-serif;
+  --tr:    all 0.38s cubic-bezier(.25,.46,.45,.94);
+}
+
+/* ===============================================================
+   RESET + BASE
+   =============================================================== */
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--fb);background:var(--ivory);color:var(--dark);overflow-x:hidden;line-height:1.6}
+
+/* ===============================================================
+   MANDALA PATTERN BG — repeating SVG tile
+   =============================================================== */
+.mandala-bg{
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Ccircle cx='60' cy='60' r='55' fill='none' stroke='%23C4923A' stroke-width='0.4' opacity='0.1'/%3E%3Ccircle cx='60' cy='60' r='38' fill='none' stroke='%23C4923A' stroke-width='0.3' opacity='0.08'/%3E%3Cpath d='M60 5 L63 57 L115 60 L63 63 L60 115 L57 63 L5 60 L57 57Z' fill='none' stroke='%23C4923A' stroke-width='0.3' opacity='0.06'/%3E%3C/svg%3E");
+  background-size:120px 120px;
+}
+
+/* ===============================================================
+   SHARED SECTION HELPERS
+   =============================================================== */
+/* Centered title used in every section */
+.stitle{
+  font-family:var(--fh);
+  font-size:clamp(2rem,5vw,3.5rem);
+  font-weight:600;
+  text-align:center;
+  color:var(--brn);
+  line-height:1.2;
+  margin-bottom:.4rem;
+}
+.stitle::after{
+  content:'';display:block;
+  width:80px;height:3px;
+  background:linear-gradient(90deg,var(--saf),var(--gold));
+  margin:.7rem auto 0;border-radius:2px;
+}
+/* Light title variant for dark sections */
+.stitle-lt{color:var(--glt);}
+.stitle-lt::after{background:linear-gradient(90deg,var(--glt),var(--saf));}
+
+/* Italic subtitle below section title */
+.ssub{
+  text-align:center;
+  color:var(--gold);
+  font-family:var(--fh);
+  font-style:italic;
+  font-size:1.1rem;
+  margin-bottom:3rem;
+}
+.ssub-lt{color:rgba(232,196,106,.6);}
+
+/* Section divider — thick diagonal stripe between sections */
+.sec-divider{
+  height:6px;
+  background:linear-gradient(90deg,var(--saf),var(--gold),var(--saf));
+  opacity:.6;
+}
+
+/* Scroll reveal base — JS adds .visible */
+.reveal{opacity:0;transform:translateY(40px);transition:opacity .7s ease,transform .7s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.rd1{transition-delay:.1s}.rd2{transition-delay:.2s}.rd3{transition-delay:.3s}
+
+/* Buttons */
+.btn-pri{
+  background:linear-gradient(135deg,var(--saf),var(--gold));
+  color:white;padding:.9rem 2.2rem;
+  font-family:var(--fb);font-size:.82rem;letter-spacing:.15em;
+  text-transform:uppercase;text-decoration:none;border:none;
+  cursor:pointer;transition:var(--tr);
+  clip-path:polygon(10px 0%,100% 0%,calc(100% - 10px) 100%,0% 100%);
+  white-space:nowrap;display:inline-block;
+}
+.btn-pri:hover{transform:translateY(-3px);box-shadow:0 14px 35px rgba(200,81,42,.4)}
+.btn-out{
+  border:1px solid rgba(196,146,58,.5);
+  color:var(--glt);padding:.9rem 2.2rem;
+  font-family:var(--fb);font-size:.82rem;letter-spacing:.15em;
+  text-transform:uppercase;text-decoration:none;background:transparent;
+  cursor:pointer;transition:var(--tr);
+  clip-path:polygon(10px 0%,100% 0%,calc(100% - 10px) 100%,0% 100%);
+  white-space:nowrap;display:inline-block;
+}
+.btn-out:hover{background:rgba(196,146,58,.1);border-color:var(--gold);transform:translateY(-3px)}
+
+/* ===============================================================
+   NAVBAR
+   =============================================================== */
+#navbar{
+  position:fixed;top:0;left:0;width:100%;z-index:1000;
+  padding:1.2rem 3rem;
+  display:flex;align-items:center;justify-content:space-between;
+  transition:var(--tr);background:transparent;
+}
+#navbar.scrolled{
+  background:rgba(26,8,0,.96);
+  backdrop-filter:blur(12px);
+  padding:.65rem 3rem;
+  box-shadow:0 4px 30px rgba(196,146,58,.15);
+}
+/* Logo */
+.logo{display:flex;align-items:center;gap:.8rem;text-decoration:none;position:relative}
+.logo-badge{
+  width:50px;height:50px;
+  background:linear-gradient(135deg,var(--saf),var(--gold));
+  border-radius:50%;display:flex;align-items:center;justify-content:center;
+  font-family:var(--fh);font-size:1.5rem;font-weight:700;color:white;flex-shrink:0;
+  box-shadow:0 0 0 2px rgba(196,146,58,.35),inset 0 0 0 1px rgba(255,255,255,.2);
+  transition:var(--tr);
+}
+/* Tooltip on logo hover */
+.logo-badge::after{
+  content:'Shiv Garden Resort';
+  position:absolute;top:calc(100% + 10px);left:0;
+  background:rgba(26,8,0,.94);color:var(--glt);
+  font-family:var(--fb);font-size:.72rem;letter-spacing:.12em;
+  white-space:nowrap;padding:.4rem .8rem;border-radius:3px;
+  border:1px solid rgba(196,146,58,.3);pointer-events:none;
+  opacity:0;transform:translateY(-4px);
+  transition:opacity .25s ease,transform .25s ease;
+}
+.logo:hover .logo-badge::after{opacity:1;transform:translateY(0)}
+.logo:hover .logo-badge{box-shadow:0 0 0 3px rgba(196,146,58,.5),0 8px 20px rgba(200,81,42,.3)}
+.logo-name{font-family:var(--fh);font-size:1.5rem;font-weight:600;color:var(--glt);line-height:1.1}
+.logo-tag{font-size:.6rem;letter-spacing:.18em;color:rgba(232,196,106,.6);text-transform:uppercase}
+
+/* Desktop nav */
+.nav-links{display:flex;gap:1.8rem;list-style:none;align-items:center}
+.nav-links a{
+  color:rgba(232,196,106,.8);text-decoration:none;
+  font-size:.82rem;letter-spacing:.1em;text-transform:uppercase;
+  transition:var(--tr);position:relative;padding-bottom:2px;
+}
+.nav-links a::after{
+  content:'';position:absolute;bottom:-3px;left:0;
+  width:0;height:1px;background:var(--gold);transition:width .3s ease;
+}
+.nav-links a:hover{color:var(--glt)}
+.nav-links a:hover::after{width:100%}
+.nav-cta{background:linear-gradient(135deg,var(--saf),var(--gold))!important;color:white!important;padding:.5rem 1.3rem!important;border-radius:3px}
+.nav-cta::after{display:none!important}
+
+/* Hamburger */
+.hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px;z-index:1001}
+.hamburger span{display:block;width:26px;height:2px;background:var(--glt);border-radius:1px;transition:var(--tr)}
+.hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.hamburger.open span:nth-child(2){opacity:0}
+.hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+/* Mobile menu */
+.mob-menu{
+  position:fixed;inset:0;background:rgba(26,8,0,.98);
+  z-index:999;display:flex;flex-direction:column;align-items:center;
+  justify-content:center;gap:2.2rem;
+  transform:translateX(100%);transition:transform .4s ease;
+}
+.mob-menu.open{transform:translateX(0)}
+.mob-menu a{font-family:var(--fh);font-size:2.2rem;color:var(--glt);text-decoration:none;transition:color .25s}
+.mob-menu a:hover{color:var(--saf)}
+
+/* ===============================================================
+   HERO — Full viewport, dark mandala rings
+   =============================================================== */
+#hero{
+  min-height:100vh;position:relative;
+  display:flex;align-items:center;justify-content:center;overflow:hidden;
+}
+.hero-bg{
+  position:absolute;inset:0;
+  background:linear-gradient(160deg,#1A0800 0%,#3D1F00 40%,#2A1200 70%,#0F0800 100%);
+}
+/* Rotating rings */
+.mring{position:absolute;border-radius:50%;border:1px solid rgba(196,146,58,.12);top:50%;left:50%}
+.mring:nth-child(1){width:500px;height:500px;margin:-250px 0 0 -250px;animation:spin 35s linear infinite}
+.mring:nth-child(2){width:720px;height:720px;margin:-360px 0 0 -360px;animation:spin 58s linear infinite reverse}
+.mring:nth-child(3){width:940px;height:940px;margin:-470px 0 0 -470px;animation:spin 78s linear infinite;border-style:dashed}
+.mring:nth-child(4){width:340px;height:340px;margin:-170px 0 0 -170px;animation:spin 22s linear infinite;border-color:rgba(200,81,42,.18)}
+@keyframes spin{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+
+.hero-content{position:relative;z-index:2;text-align:center;padding:100px 1.5rem 0;max-width:920px}
+.hero-eye{
+  font-family:var(--fh);font-size:.95rem;letter-spacing:.35em;
+  color:var(--gold);text-transform:uppercase;margin-bottom:2rem;
+  opacity:0;animation:riseUp .8s .3s forwards;
+}
+.hero-h1{
+  font-family:var(--fh);font-size:clamp(3.5rem,9vw,7.5rem);
+  font-weight:300;color:var(--ivory);line-height:1.0;margin-bottom:.75rem;
+  opacity:0;animation:riseUp .8s .5s forwards;
+}
+.hero-h1 em{
+  font-style:italic;
+  background:linear-gradient(135deg,var(--glt),var(--saf));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+}
+.hero-div{display:flex;align-items:center;justify-content:center;gap:1rem;margin:1.5rem auto;opacity:0;animation:riseUp .8s .7s forwards}
+.hero-div::before,.hero-div::after{content:'';flex:1;max-width:100px;height:1px}
+.hero-div::before{background:linear-gradient(90deg,transparent,var(--gold))}
+.hero-div::after{background:linear-gradient(90deg,var(--gold),transparent)}
+.diam{width:8px;height:8px;background:var(--gold);transform:rotate(45deg);flex-shrink:0}
+.hero-desc{
+  font-size:1.05rem;color:rgba(250,243,224,.72);font-weight:300;
+  letter-spacing:.05em;line-height:2;margin-bottom:2.5rem;
+  opacity:0;animation:riseUp .8s .9s forwards;
+}
+.hero-loc{display:inline-block;font-size:.85rem;letter-spacing:.28em;color:rgba(232,196,106,.65);margin-top:.4rem}
+.hero-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;opacity:0;animation:riseUp .8s 1.1s forwards}
+
+@keyframes riseUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+
+/* ===============================================================
+   ABOUT — Ivory + mandala bg, 2-col layout
+   =============================================================== */
+#about{padding:7rem 3rem;background:var(--ivory)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:4.5rem;max-width:1100px;margin:3rem auto 0;align-items:center}
+.about-text p{color:var(--mid);font-size:1rem;line-height:1.9;margin-bottom:1.4rem}
+.feat-grid{display:grid;grid-template-columns:1fr 1fr;gap:.9rem;margin-top:1.8rem}
+.feat-item{display:flex;align-items:center;gap:.75rem;font-size:.88rem;color:var(--brn)}
+.feat-ico{width:36px;height:36px;background:linear-gradient(135deg,var(--saf),var(--gold));border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;font-size:.82rem;flex-shrink:0}
+.about-visual{position:relative}
+/* Real photo */
+.abt-photo{width:100%;height:420px;object-fit:cover;display:block;border:1px solid rgba(196,146,58,.2)}
+.abt-badge{
+  position:absolute;bottom:-25px;right:-20px;
+  width:155px;height:155px;
+  background:linear-gradient(135deg,var(--saf),var(--gold));
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  color:white;font-family:var(--fh);font-size:1rem;text-align:center;padding:1rem;
+  box-shadow:0 20px 40px rgba(0,0,0,.2);
+}
+.badge-num{font-size:2.4rem;font-weight:700;line-height:1}
+
+/* ===============================================================
+   SERVICES — DARK dramatic section (distinct from others)
+   =============================================================== */
+#services{
+  padding:7rem 3rem;
+  background:linear-gradient(160deg,#1A0800 0%,#2E1400 60%,#1A0800 100%);
+  position:relative;overflow:hidden;
+}
+/* Faint mandala in services bg */
+#services::before{
+  content:'';position:absolute;inset:0;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Ccircle cx='100' cy='100' r='90' fill='none' stroke='%23C4923A' stroke-width='0.5' opacity='0.07'/%3E%3Ccircle cx='100' cy='100' r='60' fill='none' stroke='%23C4923A' stroke-width='0.4' opacity='0.06'/%3E%3Cpath d='M100 10 L103 97 L190 100 L103 103 L100 190 L97 103 L10 100 L97 97Z' fill='none' stroke='%23C8512A' stroke-width='0.3' opacity='0.05'/%3E%3C/svg%3E");
+  background-size:200px 200px;pointer-events:none;
+}
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;max-width:1100px;margin:0 auto}
+.svc-card{
+  background:rgba(255,255,255,.04);
+  border:1px solid rgba(196,146,58,.18);
+  padding:2.5rem 2rem;position:relative;transition:var(--tr);
+}
+.svc-card::before{content:'';position:absolute;top:0;left:0;width:100%;height:3px;background:linear-gradient(90deg,var(--saf),var(--gold))}
+.svc-card:hover{transform:translateY(-8px);background:rgba(255,255,255,.07);border-color:rgba(196,146,58,.4);box-shadow:0 25px 60px rgba(0,0,0,.3)}
+.svc-ico{
+  width:68px;height:68px;
+  background:linear-gradient(135deg,rgba(200,81,42,.15),rgba(196,146,58,.15));
+  border:1px solid rgba(196,146,58,.25);border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.7rem;margin-bottom:1.5rem;transition:var(--tr);
+}
+.svc-card:hover .svc-ico{background:linear-gradient(135deg,var(--saf),var(--gold))}
+.svc-card h3{font-family:var(--fh);font-size:1.6rem;color:var(--glt);margin-bottom:.75rem}
+.svc-card p{color:rgba(250,243,224,.55);font-size:.93rem;line-height:1.75;margin-bottom:1.5rem}
+.svc-list{list-style:none;display:flex;flex-direction:column;gap:.5rem}
+.svc-list li{font-size:.84rem;color:rgba(232,196,106,.7);display:flex;align-items:center;gap:.5rem}
+.svc-list li::before{content:'';width:5px;height:5px;background:var(--gold);border-radius:50%;flex-shrink:0}
+
+/* ===============================================================
+   GALLERY — Full-width IMAGE SLIDER
+   =============================================================== */
+#gallery{padding:0;background:#0F0800;position:relative}
+
+/* Top label row */
+.gal-header{padding:5rem 3rem 2rem;text-align:center}
+
+/* Main slider container */
+.gal-slider{position:relative;overflow:hidden;width:100%;height:520px}
+
+/* Track — holds all slides side by side */
+.gal-track{
+  display:flex;height:100%;
+  transition:transform .6s cubic-bezier(.25,.46,.45,.94);
+}
+
+/* Individual slide */
+.gal-slide{
+  min-width:100%;height:100%;position:relative;flex-shrink:0;
+}
+.gal-slide img{
+  width:100%;height:100%;object-fit:cover;display:block;
+  filter:brightness(.85);transition:filter .5s ease;
+}
+.gal-slide:hover img{filter:brightness(1)}
+
+/* Slide caption overlay */
+.gal-cap{
+  position:absolute;bottom:0;left:0;right:0;
+  background:linear-gradient(to top,rgba(26,8,0,.85) 0%,transparent 100%);
+  padding:2rem;
+}
+.gal-cap h4{font-family:var(--fh);font-size:1.6rem;color:white;font-weight:400}
+.gal-cap p{color:rgba(232,196,106,.75);font-size:.85rem;letter-spacing:.08em}
+
+/* Left / right arrow buttons */
+.gal-btn{
+  position:absolute;top:50%;transform:translateY(-50%);
+  background:rgba(26,8,0,.7);border:1px solid rgba(196,146,58,.4);
+  color:var(--glt);width:52px;height:52px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.1rem;cursor:pointer;z-index:10;transition:var(--tr);
+  backdrop-filter:blur(6px);
+}
+.gal-btn:hover{background:linear-gradient(135deg,var(--saf),var(--gold));border-color:transparent;color:white}
+.gal-prev{left:1.5rem}
+.gal-next{right:1.5rem}
+
+/* Dot indicators */
+.gal-dots{
+  display:flex;justify-content:center;gap:.6rem;
+  padding:1.5rem 0 3rem;background:#0F0800;
+}
+.gal-dot{
+  width:8px;height:8px;border-radius:50%;
+  background:rgba(196,146,58,.35);border:none;cursor:pointer;
+  transition:var(--tr);padding:0;
+}
+.gal-dot.active{background:var(--gold);width:24px;border-radius:4px}
+
+/* Thumbnail strip below main slider */
+.gal-thumbs{
+  display:flex;gap:4px;padding:0 0 0;overflow-x:auto;
+  background:#0F0800;justify-content:center;flex-wrap:nowrap;
+  scrollbar-width:none;-ms-overflow-style:none;
+}
+.gal-thumbs::-webkit-scrollbar{display:none}
+.gal-thumb{
+  width:110px;height:70px;flex-shrink:0;cursor:pointer;
+  opacity:.45;transition:var(--tr);border:2px solid transparent;
+  overflow:hidden;
+}
+.gal-thumb img{width:100%;height:100%;object-fit:cover;display:block}
+.gal-thumb.active{opacity:1;border-color:var(--gold)}
+.gal-thumb:hover{opacity:.8}
+
+/* ===============================================================
+   VIDEO SECTION
+   =============================================================== */
+#video{padding:7rem 3rem;background:linear-gradient(160deg,#1A0800,#3D1F00);position:relative;overflow:hidden}
+#video::before{
+  content:'';position:absolute;inset:0;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='50' height='50'%3E%3Ccircle cx='25' cy='25' r='20' fill='none' stroke='%23C4923A' stroke-width='0.3' opacity='0.1'/%3E%3C/svg%3E");
+  background-size:50px;pointer-events:none;
+}
+.vid-wrap{max-width:900px;margin:0 auto;border:1px solid rgba(196,146,58,.3);border-radius:4px;overflow:hidden;box-shadow:0 40px 80px rgba(0,0,0,.5)}
+.vid-box{position:relative;padding-bottom:56.25%;height:0;overflow:hidden}
+.vid-box iframe,.vid-box video{position:absolute;top:0;left:0;width:100%;height:100%}
+.vid-ph{position:relative;padding-bottom:56.25%;background:linear-gradient(135deg,#1A0800,#3D1F00);cursor:pointer}
+.vid-ph-in{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1rem}
+.play-btn{width:80px;height:80px;background:linear-gradient(135deg,var(--saf),var(--gold));border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.8rem;color:white;animation:pulse 2s ease-in-out infinite}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(196,146,58,.4)}50%{box-shadow:0 0 0 20px rgba(196,146,58,0)}}
+.vid-ph p{color:rgba(250,243,224,.65);font-size:.88rem;letter-spacing:.1em}
+
+/* ===============================================================
+   REVIEWS — Dark warm bg + AUTO-SLIDING CAROUSEL
+   =============================================================== */
+#reviews{
+  padding:7rem 3rem;
+  background:linear-gradient(160deg,#2E1800 0%,#1A0F00 50%,#2E1800 100%);
+  position:relative;overflow:hidden;
+}
+#reviews::before{
+  content:'';position:absolute;inset:0;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Ccircle cx='80' cy='80' r='75' fill='none' stroke='%23C4923A' stroke-width='0.5' opacity='0.06'/%3E%3C/svg%3E");
+  background-size:160px;pointer-events:none;
+}
+
+/* Slider wrapper clips the track */
+.rev-slider{position:relative;overflow:hidden;max-width:1100px;margin:0 auto}
+
+/* Track that slides horizontally */
+.rev-track{display:flex;gap:1.5rem;transition:transform .55s cubic-bezier(.25,.46,.45,.94)}
+
+/* Individual review card */
+.rev-card{
+  min-width:calc(33.33% - 1rem);background:rgba(255,255,255,.06);
+  padding:2rem;border:1px solid rgba(196,146,58,.12);flex-shrink:0;
+  transition:var(--tr);position:relative;
+}
+.rev-card::before{
+  content:'"';position:absolute;top:.5rem;left:1.5rem;
+  font-family:var(--fh);font-size:5rem;color:var(--gold);opacity:.15;line-height:1;
+}
+.rev-card:hover{border-color:rgba(196,146,58,.35);background:rgba(255,255,255,.1)}
+.stars{color:var(--gold);font-size:.9rem;margin-bottom:1rem;letter-spacing:.1em}
+.rev-text{color:rgba(250,243,224,.7);font-size:.93rem;line-height:1.8;margin-bottom:1.5rem;font-style:italic}
+.reviewer{display:flex;align-items:center;gap:.75rem}
+.rev-av{width:44px;height:44px;background:linear-gradient(135deg,var(--saf),var(--gold));border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:1rem;flex-shrink:0}
+.rev-name{font-weight:700;color:var(--glt);font-size:.88rem}
+.rev-occ{font-size:.76rem;color:var(--gold)}
+
+/* Review nav arrows */
+.rev-ctrl{display:flex;justify-content:center;align-items:center;gap:1rem;margin-top:2.5rem}
+.rev-btn{
+  background:rgba(26,8,0,.7);border:1px solid rgba(196,146,58,.4);
+  color:var(--glt);width:46px;height:46px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  font-size:1rem;cursor:pointer;transition:var(--tr);
+}
+.rev-btn:hover{background:linear-gradient(135deg,var(--saf),var(--gold));border-color:transparent;color:white}
+
+/* Review dots */
+.rev-dots{display:flex;gap:.5rem;align-items:center}
+.rev-dot{width:8px;height:8px;border-radius:50%;background:rgba(196,146,58,.3);border:none;cursor:pointer;transition:var(--tr);padding:0}
+.rev-dot.active{background:var(--gold);width:22px;border-radius:4px}
+
+/* ===============================================================
+   CONTACT — Ivory + left gold panel
+   =============================================================== */
+#contact{padding:7rem 0;background:var(--ivory)}
+.contact-wrap{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1.2fr;min-height:600px}
+
+/* Left gold-dark panel */
+.cinfo-panel{
+  background:linear-gradient(160deg,#2E1800,#1A0800);
+  padding:4rem 3rem;
+  position:relative;overflow:hidden;
+}
+.cinfo-panel::before{
+  content:'';position:absolute;inset:0;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Ccircle cx='60' cy='60' r='55' fill='none' stroke='%23C4923A' stroke-width='0.4' opacity='0.1'/%3E%3C/svg%3E");
+  background-size:120px;pointer-events:none;
+}
+.cinfo-panel h3{font-family:var(--fh);font-size:2rem;color:var(--glt);margin-bottom:.5rem;position:relative}
+.cinfo-panel > p{color:rgba(250,243,224,.55);font-size:.93rem;line-height:1.8;margin-bottom:2.5rem;position:relative}
+.cdet{display:flex;align-items:flex-start;gap:1rem;margin-bottom:1.4rem;position:relative}
+.cdet-ico{width:40px;height:40px;background:linear-gradient(135deg,var(--saf),var(--gold));border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;font-size:.88rem;flex-shrink:0;margin-top:2px}
+.cdet-txt strong{display:block;color:var(--glt);font-size:.8rem;text-transform:uppercase;letter-spacing:.1em;margin-bottom:.2rem}
+.cdet-txt span{color:rgba(250,243,224,.6);font-size:.93rem}
+.socials{display:flex;gap:.75rem;margin-top:2rem;flex-wrap:wrap;position:relative}
+.soc-lnk{width:44px;height:44px;background:rgba(255,255,255,.07);border:1px solid rgba(196,146,58,.3);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--gold);font-size:1rem;text-decoration:none;transition:var(--tr)}
+.soc-lnk:hover{background:linear-gradient(135deg,var(--saf),var(--gold));border-color:transparent;color:white;transform:translateY(-3px)}
+
+/* Right form panel */
+.cform-panel{background:white;padding:4rem 3rem}
+.cform-panel h3{font-family:var(--fh);font-size:1.8rem;color:var(--brn);margin-bottom:1.5rem}
+.fgrp{margin-bottom:1.1rem}
+.fgrp label{display:block;font-size:.78rem;text-transform:uppercase;letter-spacing:.1em;color:var(--brn);margin-bottom:.35rem}
+.fgrp input,.fgrp select,.fgrp textarea{width:100%;padding:.72rem 1rem;background:var(--ivory);border:1px solid rgba(196,146,58,.22);font-family:var(--fb);font-size:.93rem;color:var(--dark);transition:var(--tr);outline:none}
+.fgrp input:focus,.fgrp select:focus,.fgrp textarea:focus{border-color:var(--gold);background:white;box-shadow:0 0 0 3px rgba(196,146,58,.07)}
+.fgrp textarea{min-height:110px;resize:vertical}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.btn-sub{width:100%;padding:1rem;background:linear-gradient(135deg,var(--saf),var(--gold));color:white;border:none;font-family:var(--fb);font-size:.88rem;letter-spacing:.15em;text-transform:uppercase;cursor:pointer;transition:var(--tr);margin-top:.5rem}
+.btn-sub:hover{opacity:.9;transform:translateY(-2px);box-shadow:0 10px 30px rgba(200,81,42,.3)}
+
+/* ===============================================================
+   FOOTER
+   =============================================================== */
+footer{background:var(--dark);color:rgba(232,196,106,.55);padding:4rem 3rem 2rem}
+.ft-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;max-width:1100px;margin:0 auto 3rem}
+.ft-brand{font-family:var(--fh);font-size:1.6rem;color:var(--glt);display:block;margin-bottom:.3rem}
+.ft-desc{font-size:.88rem;line-height:1.75;color:rgba(250,243,224,.45);margin-bottom:1.5rem}
+.ft-col h4{font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:1.2rem}
+.ft-links{list-style:none;display:flex;flex-direction:column;gap:.55rem}
+.ft-links a{color:rgba(250,243,224,.45);text-decoration:none;font-size:.88rem;transition:color .3s}
+.ft-links a:hover{color:var(--glt)}
+.ft-soc{display:flex;gap:.7rem;flex-wrap:wrap;margin-top:1rem}
+.ft-soc a{color:rgba(196,146,58,.45);font-size:1rem;text-decoration:none;transition:color .3s}
+.ft-soc a:hover{color:var(--glt)}
+.ft-bot{max-width:1100px;margin:0 auto;padding-top:2rem;border-top:1px solid rgba(196,146,58,.1);display:flex;align-items:center;justify-content:space-between;font-size:.78rem;flex-wrap:wrap;gap:1rem}
+
+/* ===============================================================
+   FLOATING WHATSAPP
+   =============================================================== */
+.wa-float{position:fixed;bottom:2rem;right:2rem;z-index:998;width:56px;height:56px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;font-size:1.5rem;text-decoration:none;box-shadow:0 8px 25px rgba(37,211,102,.4);transition:var(--tr);animation:fadeIn 1s 2s both}
+.wa-float:hover{transform:scale(1.1);box-shadow:0 12px 35px rgba(37,211,102,.5)}
+
+/* ===============================================================
+   REGISTRATION POPUP
+   =============================================================== */
+.popup-overlay{position:fixed;inset:0;background:rgba(26,8,0,.85);backdrop-filter:blur(6px);z-index:9999;display:flex;align-items:center;justify-content:center;padding:1rem;animation:fadeIn .5s ease}
+.popup-box{background:var(--ivory);max-width:480px;width:100%;position:relative;border:1px solid rgba(196,146,58,.3);box-shadow:0 40px 80px rgba(0,0,0,.5);animation:riseUp .5s ease;overflow:hidden}
+.popup-box::before{content:'';display:block;height:4px;background:linear-gradient(90deg,var(--saf),var(--gold))}
+.popup-inner{padding:2rem 2rem 1.5rem}
+.popup-close{position:absolute;top:.9rem;right:1rem;background:none;border:none;color:var(--mid);font-size:1.4rem;cursor:pointer;line-height:1;transition:color .2s}
+.popup-close:hover{color:var(--saf)}
+.popup-brand{font-family:var(--fh);font-size:1.6rem;font-weight:600;color:var(--brn);text-align:center;margin-bottom:.25rem}
+.popup-line{width:60px;height:2px;background:linear-gradient(90deg,var(--saf),var(--gold));margin:.5rem auto 1rem;border-radius:2px}
+.popup-msg{text-align:center;color:var(--mid);font-size:.93rem;line-height:1.6;margin-bottom:1.5rem}
+.popup-field{margin-bottom:.9rem}
+.popup-field label{display:block;font-size:.75rem;text-transform:uppercase;letter-spacing:.1em;color:var(--brn);margin-bottom:.3rem}
+.popup-field input{width:100%;padding:.65rem .9rem;background:white;border:1px solid rgba(196,146,58,.25);font-family:var(--fb);font-size:.92rem;color:var(--dark);outline:none;transition:var(--tr)}
+.popup-field input:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(196,146,58,.08)}
+.popup-btn-reg{width:100%;padding:.85rem;background:linear-gradient(135deg,var(--saf),var(--gold));color:white;border:none;font-family:var(--fb);font-size:.85rem;letter-spacing:.12em;text-transform:uppercase;cursor:pointer;transition:var(--tr);margin-top:.5rem}
+.popup-btn-reg:hover{opacity:.9;transform:translateY(-1px);box-shadow:0 8px 20px rgba(200,81,42,.3)}
+.popup-skip{display:block;text-align:center;margin-top:.75rem;color:var(--mid);font-size:.82rem;cursor:pointer;text-decoration:underline;text-underline-offset:3px;transition:color .2s;border:none;background:none;width:100%;padding:.3rem}
+.popup-skip:hover{color:var(--saf)}
+.popup-success{text-align:center;padding:2rem 1rem 1rem}
+.popup-success .ok-icon{font-size:2.5rem;margin-bottom:.75rem}
+.popup-success h4{font-family:var(--fh);font-size:1.5rem;color:var(--brn);margin-bottom:.5rem}
+.popup-success p{color:var(--mid);font-size:.9rem}
+.hidden{display:none!important}
+
+/* ===============================================================
+   COOKIE BAR
+   =============================================================== */
+.cookie-bar{position:fixed;bottom:0;left:0;width:100%;background:rgba(26,8,0,.97);border-top:1px solid rgba(196,146,58,.2);z-index:9998;display:flex;align-items:center;justify-content:space-between;padding:.9rem 2rem;gap:1.5rem;flex-wrap:wrap;animation:slideUp .4s ease}
+@keyframes slideUp{from{transform:translateY(100%)}to{transform:translateY(0)}}
+.cookie-bar p{color:rgba(250,243,224,.7);font-size:.83rem;line-height:1.5;flex:1;min-width:200px}
+.cookie-bar strong{color:var(--glt)}
+.cookie-accept{background:linear-gradient(135deg,var(--saf),var(--gold));color:white;border:none;padding:.55rem 1.4rem;font-family:var(--fb);font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;transition:var(--tr);white-space:nowrap;border-radius:2px}
+.cookie-accept:hover{opacity:.9;transform:translateY(-1px)}
+.cookie-decline{background:none;border:1px solid rgba(196,146,58,.3);color:rgba(232,196,106,.7);padding:.5rem 1rem;font-family:var(--fb);font-size:.8rem;cursor:pointer;transition:var(--tr);white-space:nowrap;border-radius:2px}
+.cookie-decline:hover{border-color:var(--gold);color:var(--glt)}
+
+/* ===============================================================
+   RESPONSIVE BREAKPOINTS
+   =============================================================== */
+@media(max-width:1024px){
+  .svc-grid{grid-template-columns:repeat(2,1fr)}
+  .ft-grid{grid-template-columns:1fr 1fr}
+  .rev-card{min-width:calc(50% - .75rem)}
+  .contact-wrap{grid-template-columns:1fr}
+  .cinfo-panel,.cform-panel{padding:3rem 2rem}
+}
+@media(max-width:768px){
+  .nav-links{display:none}
+  .hamburger{display:flex}
+  #navbar{padding:1rem 1.25rem}
+  .hero-content{padding-top:80px}
+  .about-grid{grid-template-columns:1fr;gap:3rem}
+  .abt-badge{right:0;bottom:-20px}
+  .svc-grid{grid-template-columns:1fr}
+  .rev-card{min-width:calc(100% - 0px)}
+  .ft-grid{grid-template-columns:1fr;gap:2rem}
+  .ft-bot{flex-direction:column;text-align:center}
+  .frow{grid-template-columns:1fr}
+  .feat-grid{grid-template-columns:1fr}
+  .gal-slider{height:320px}
+  .gal-thumb{width:80px;height:55px}
+  #about,#services,#gallery .gal-header,#video,#reviews,#contact,footer{padding-left:1.25rem;padding-right:1.25rem}
+  .cinfo-panel,.cform-panel{padding:2.5rem 1.5rem}
+}
+@media(max-width:480px){
+  .logo-tag{display:none}
+  .hero-h1{font-size:clamp(2.8rem,12vw,4rem)}
+  .hero-btns{flex-direction:column;align-items:center}
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================================
+     REGISTRATION POPUP
+     ============================================================ -->
+<div class="popup-overlay" id="regPopup" role="dialog" aria-modal="true">
+  <div class="popup-box">
+    <button class="popup-close" onclick="closePopup()" aria-label="Close">✕</button>
+    <div class="popup-inner">
+      <div class="popup-brand">🏨 Shiv Garden Resort</div>
+      <div class="popup-line"></div>
+      <p class="popup-msg">
+        Welcome! Register to receive <strong>exclusive offers</strong>,
+        wedding packages &amp; special deals straight to your inbox.
+        <br><em style="font-size:.82rem;color:var(--gold);">Your information is safe with us.</em>
+      </p>
+      <div id="regFormWrap">
+        <form id="regForm">
+          <div class="popup-field">
+            <label for="rName">Full Name *</label>
+            <input type="text" id="rName" placeholder="Ramesh Gupta" required/>
+          </div>
+          <div class="popup-field">
+            <label for="rPhone">Mobile Number *</label>
+            <input type="tel" id="rPhone" placeholder="+91 98765 43210" required/>
+          </div>
+          <div class="popup-field">
+            <label for="rEmail">Email Address</label>
+            <input type="email" id="rEmail" placeholder="your@email.com"/>
+          </div>
+          <button type="submit" class="popup-btn-reg">
+            <i class="fas fa-star" style="margin-right:.5rem"></i>Register &amp; Get Offers
+          </button>
+          <button type="button" class="popup-skip" onclick="closePopup()">
+            No thanks, continue to website →
+          </button>
+        </form>
+      </div>
+      <div id="regSuccess" class="popup-success hidden">
+        <div class="ok-icon">🎉</div>
+        <h4>You're Registered!</h4>
+        <p>Thank you! We'll send you our best offers soon.</p>
+        <button class="popup-btn-reg" style="margin-top:1.25rem" onclick="closePopup()">Go to Website</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================
+     COOKIE BAR
+     ============================================================ -->
+<div class="cookie-bar" id="cookieBar" role="alert">
+  <p><strong>🍪 We use cookies</strong> to improve your experience. By continuing you agree to our cookie policy. Your data is never sold to third parties.</p>
+  <div style="display:flex;gap:.75rem;align-items:center;flex-wrap:wrap">
+    <button class="cookie-accept"  onclick="acceptCookies()">Accept All</button>
+    <button class="cookie-decline" onclick="declineCookies()">Decline</button>
+  </div>
+</div>
+
+<!-- ============================================================
+     NAVBAR
+     ============================================================ -->
+<nav id="navbar" role="navigation">
+  <a href="#hero" class="logo">
+    <div class="logo-badge">S</div>
+    <div>
+      <div class="logo-name">Shiv Garden</div>
+      <div class="logo-tag">Resort &amp; Wedding Hall</div>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#about">About Us</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#video">Video</a></li>
+    <li><a href="#reviews">Reviews</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#contact" class="nav-cta">Book Now</a></li>
+  </ul>
+  <button class="hamburger" id="hamBtn" aria-label="Toggle menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- Mobile menu -->
+<div class="mob-menu" id="mobMenu">
+  <a href="#about"    onclick="closeNav()">About Us</a>
+  <a href="#services" onclick="closeNav()">Services</a>
+  <a href="#gallery"  onclick="closeNav()">Gallery</a>
+  <a href="#video"    onclick="closeNav()">Video</a>
+  <a href="#reviews"  onclick="closeNav()">Reviews</a>
+  <a href="#contact"  onclick="closeNav()">Contact</a>
+  <a href="#contact"  onclick="closeNav()" style="color:var(--saf)">Book Now</a>
+</div>
+
+<!-- ============================================================
+     HERO
+     ============================================================ -->
+<section id="hero">
+  <div class="hero-bg" aria-hidden="true">
+    <div class="mring"></div><div class="mring"></div>
+    <div class="mring"></div><div class="mring"></div>
+  </div>
+  <div class="hero-content">
+    <div class="hero-eye">✦ Welcome to Luxury ✦</div>
+    <h1 class="hero-h1">Shiv<br><em>Garden</em></h1>
+    <div class="hero-div"><div class="diam"></div></div>
+    <p class="hero-desc">
+      Luxury Resort &nbsp;·&nbsp; Authentic Restaurant &nbsp;·&nbsp; Grand Wedding Hall
+      <br><span class="hero-loc">Chakka, Darbhanga — Bihar, India</span>
+    </p>
+    <div class="hero-btns">
+      <a href="#contact"  class="btn-pri">Book Now</a>
+      <a href="#services" class="btn-out">Our Services</a>
+    </div>
+  </div>
+</section>
+
+<div class="sec-divider"></div>
+
+<!-- ============================================================
+     ABOUT
+     ============================================================ -->
+<section id="about" class="mandala-bg">
+  <div style="max-width:1100px;margin:0 auto">
+    <h2 class="stitle reveal">About Us</h2>
+    <p class="ssub reveal rd1">A Unique Experience, Every Time</p>
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <p><strong>Shiv Garden Resort</strong> is a premier destination in the heart of Darbhanga, Bihar. Nestled in lush greenery with a grand banquet hall and open lawn, we offer everything under one roof — from daily dining to dream weddings.</p>
+        <p>Our restaurant serves authentic Indian cuisine every day, welcoming families for lunch, dinner, and special occasions. Our grand hall and lawn have hosted hundreds of unforgettable weddings with capacity for 700+ guests.</p>
+        <p>From décor and catering to comfortable stay for wedding guests, our experienced team manages every detail so you can cherish every moment.</p>
+        <div class="feat-grid">
+          <div class="feat-item"><div class="feat-ico"><i class="fas fa-utensils"></i></div><span>Authentic Cuisine</span></div>
+          <div class="feat-item"><div class="feat-ico"><i class="fas fa-ring"></i></div><span>Grand Wedding Hall</span></div>
+          <div class="feat-item"><div class="feat-ico"><i class="fas fa-bed"></i></div><span>20 Luxury Rooms</span></div>
+          <div class="feat-item"><div class="feat-ico"><i class="fas fa-glass-cheers"></i></div><span>Event Management</span></div>
+          <div class="feat-item"><div class="feat-ico"><i class="fas fa-leaf"></i></div><span>Lush Garden Lawn</span></div>
+          <div class="feat-item"><div class="feat-ico"><i class="fas fa-parking"></i></div><span>Ample Parking</span></div>
+        </div>
+      </div>
+      <div class="about-visual reveal rd2">
+        <!-- REAL PHOTO from WedMeGood listing -->
+        <img class="abt-photo"
+             src="https://image.wedmegood.com/resized/1000X/uploads/member/4174934/1680080227_Screenshot_55.jpg"
+             alt="Shiv Garden Resort — Wedding Hall"
+             onerror="this.style.background='linear-gradient(160deg,#3D1F00,#8B4513)';this.src='';this.alt='Shiv Garden Resort'"/>
+        <div class="abt-badge">
+          <span class="badge-num">700+</span>
+          Guest Capacity
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="sec-divider"></div>
+
+<!-- ============================================================
+     SERVICES — Dark dramatic section
+     ============================================================ -->
+<section id="services">
+  <h2 class="stitle stitle-lt reveal">Our Services</h2>
+  <p class="ssub ssub-lt reveal rd1">Three Unique Experiences Under One Roof</p>
+  <div class="svc-grid">
+
+    <div class="svc-card reveal rd1">
+      <div class="svc-ico">🍽️</div>
+      <h3>Restaurant</h3>
+      <p>Open daily from morning to night, our kitchen serves home-style Indian food crafted with fresh ingredients and authentic spices.</p>
+      <ul class="svc-list">
+        <li>Breakfast, Lunch &amp; Dinner</li>
+        <li>Veg &amp; Non-Veg — ₹550 / ₹650 per plate</li>
+        <li>Live Tandoor Station</li>
+        <li>Family &amp; Group Bookings</li>
+        <li>Hygienic Open Kitchen</li>
+        <li>Outdoor Catering Available</li>
+      </ul>
+    </div>
+
+    <div class="svc-card reveal rd2">
+      <div class="svc-ico">💍</div>
+      <h3>Wedding Hall</h3>
+      <p>From intimate gatherings to grand celebrations — our banquet hall and open lawn are ready to make your special day truly unforgettable.</p>
+      <ul class="svc-list">
+        <li>Indoor Hall — 300 to 400 Guests</li>
+        <li>Outdoor Lawn — up to 700 Guests</li>
+        <li>Outside Decorators Permitted</li>
+        <li>Outside DJ &amp; Alcohol Permitted</li>
+        <li>Mehendi &amp; Seminar Occasions</li>
+        <li>Full Refund Cancellation Policy</li>
+      </ul>
+    </div>
+
+    <div class="svc-card reveal rd3">
+      <div class="svc-ico">🏨</div>
+      <h3>Luxury Stay</h3>
+      <p>20 well-furnished rooms with modern amenities — perfect for wedding guests and leisure travellers seeking comfort in Darbhanga.</p>
+      <ul class="svc-list">
+        <li>20 Rooms Available</li>
+        <li>AC &amp; Non-AC Options</li>
+        <li>24/7 Room Service</li>
+        <li>Hot Water &amp; Geyser</li>
+        <li>Wedding Guest Priority</li>
+        <li>Check-In 12 PM / Check-Out 11 AM</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<div class="sec-divider"></div>
+
+<!-- ============================================================
+     GALLERY — Full-width IMAGE SLIDER with real photos
+     ============================================================ -->
+<section id="gallery">
+  <div class="gal-header">
+    <h2 class="stitle stitle-lt reveal">Photo Gallery</h2>
+    <p class="ssub ssub-lt reveal rd1">Moments That Last Forever</p>
+  </div>
+
+  <!-- MAIN SLIDER -->
+  <div class="gal-slider">
+    <div class="gal-track" id="galTrack">
+
+      <!-- Slide 1 -->
+      <div class="gal-slide">
+        <img src="https://image.wedmegood.com/resized/800X/uploads/member/4174934/1680080227_Screenshot_55.jpg"
+             alt="Shiv Garden Resort — Wedding Hall"
+             onerror="this.parentElement.style.background='linear-gradient(135deg,#2C1500,#7A4020)'"/>
+        <div class="gal-cap">
+          <h4>Grand Wedding Hall</h4>
+          <p>Elegant décor · Premium lighting · Up to 400 guests indoors</p>
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="gal-slide">
+        <img src="https://image.wedmegood.com/resized/800X/uploads/member/4174934/1680074518_2022_12_24.jpg"
+             alt="Shiv Garden Resort — Celebration"
+             onerror="this.parentElement.style.background='linear-gradient(135deg,#1A0F00,#9B6030)'"/>
+        <div class="gal-cap">
+          <h4>Festive Celebrations</h4>
+          <p>Every occasion made special at Shiv Garden Resort</p>
+        </div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="gal-slide">
+        <img src="https://image.wedmegood.com/resized/800X/uploads/member/4174934/1680074518_2022_02_04.jpg"
+             alt="Shiv Garden Resort — Wedding Event"
+             onerror="this.parentElement.style.background='linear-gradient(135deg,#3D1F00,#A0622D)'"/>
+        <div class="gal-cap">
+          <h4>Wedding Events</h4>
+          <p>Bride &amp; groom's grand entry · Stunning stage setups</p>
+        </div>
+      </div>
+
+      <!-- Slide 4 -->
+      <div class="gal-slide">
+        <img src="https://image.wedmegood.com/resized/800X/uploads/member/4174934/1680074517_2021_01_09.jpg"
+             alt="Shiv Garden Resort — Banquet"
+             onerror="this.parentElement.style.background='linear-gradient(135deg,#4A2000,#C4923A)'"/>
+        <div class="gal-cap">
+          <h4>Banquet Hall</h4>
+          <p>Premium interiors · Perfect for every celebration</p>
+        </div>
+      </div>
+
+      <!-- Slide 5 -->
+      <div class="gal-slide">
+        <img src="https://image.wedmegood.com/resized/800X/uploads/member/4174934/1680074517_2019_09_22.jpg"
+             alt="Shiv Garden Resort — Outdoor Lawn"
+             onerror="this.parentElement.style.background='linear-gradient(135deg,#2A1400,#8A4010)'"/>
+        <div class="gal-cap">
+          <h4>Outdoor Lawn</h4>
+          <p>Open-air venue · Up to 700 guests · Beautiful garden setting</p>
+        </div>
+      </div>
+
+      <!-- Slide 6 -->
+      <div class="gal-slide">
+        <img src="https://image.wedmegood.com/resized/800X/uploads/member/4174934/1680074517_IMG_20221202_181701.jpg"
+             alt="Shiv Garden Resort — Evening"
+             onerror="this.parentElement.style.background='linear-gradient(135deg,#1F0A00,#6C3500)'"/>
+        <div class="gal-cap">
+          <h4>Evening Celebrations</h4>
+          <p>Magical lights · Warm ambience · Unforgettable memories</p>
+        </div>
+      </div>
+
+      <!-- Slide 7 -->
+      <div class="gal-slide">
+        <img src="https://image.wedmegood.com/resized/800X/uploads/member/4174934/1680074517_2022_12_28.jpg"
+             alt="Shiv Garden Resort — Decoration"
+             onerror="this.parentElement.style.background='linear-gradient(135deg,#3D1F00,#8B4513)'"/>
+        <div class="gal-cap">
+          <h4>Royal Decoration</h4>
+          <p>Customised décor packages for every event and budget</p>
+        </div>
+      </div>
+
+    </div><!-- /.gal-track -->
+
+    <!-- Prev / Next arrows -->
+    <button class="gal-btn gal-prev" id="galPrev" aria-label="Previous photo">
+      <i class="fas fa-chevron-left"></i>
+    </button>
+    <button class="gal-btn gal-next" id="galNext" aria-label="Next photo">
+      <i class="fas fa-chevron-right"></i>
+    </button>
+  </div><!-- /.gal-slider -->
+
+  <!-- Dot indicators -->
+  <div class="gal-dots" id="galDots"></div>
+
+  <!-- Thumbnail strip -->
+  <div class="gal-thumbs" id="galThumbs"></div>
+
+</section><!-- /#gallery -->
+
+<div class="sec-divider"></div>
+
+<!-- ============================================================
+     VIDEO SECTION
+     HOW TO ADD VIDEO:
+       Replace .vid-ph div with:
+       <div class="vid-box">
+         <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+       </div>
+     ============================================================ -->
+<section id="video">
+  <h2 class="stitle stitle-lt reveal">Our Video</h2>
+  <p class="ssub ssub-lt reveal rd1">See It Yourself, Feel It Yourself</p>
+  <div class="vid-wrap reveal">
+    <div class="vid-ph">
+      <div class="vid-ph-in">
+        <div class="play-btn">▶</div>
+        <p>ADD YOUR PROMO VIDEO HERE</p>
+        <p style="font-size:.78rem;opacity:.5">(Paste YouTube link or MP4 file)</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="sec-divider"></div>
+
+<!-- ============================================================
+     REVIEWS — Dark bg + SLIDING CAROUSEL
+     ============================================================ -->
+<section id="reviews">
+  <h2 class="stitle stitle-lt reveal">Happy Guests</h2>
+  <p class="ssub ssub-lt reveal rd1">Those Who Came, Left With Smiles</p>
+
+  <div class="rev-slider reveal">
+    <!-- Track — JS controls transform -->
+    <div class="rev-track" id="revTrack">
+
+      <div class="rev-card">
+        <div class="stars">★★★★★</div>
+        <p class="rev-text">"Shiv Garden Resort is one of the best wedding venues in the city! Ample seating capacity in the banquet, rooms with all basic amenities! Bride and groom's entry was very cool!! Great venue with outstanding hospitality!!"</p>
+        <div class="reviewer">
+          <div class="rev-av">K</div>
+          <div><div class="rev-name">Krishna Kumar</div><div class="rev-occ">Wedding · January 2024</div></div>
+        </div>
+      </div>
+
+      <div class="rev-card">
+        <div class="stars">★★★★★</div>
+        <p class="rev-text">"Wedding ke liye isse accha toh kuch hai hi nahi! Awesome management, beautiful hall and garden setting. The entire team made our special day truly memorable. Highly recommended!"</p>
+        <div class="reviewer">
+          <div class="rev-av">W</div>
+          <div><div class="rev-name">Whhs Bhsbsh</div><div class="rev-occ">Wedding · May 2023</div></div>
+        </div>
+      </div>
+
+      <div class="rev-card">
+        <div class="stars">★★★★★</div>
+        <p class="rev-text">"My daughter's wedding was held at Shiv Garden. Everything was beautiful — décor, food, service — absolutely first-class. Not a single moment of worry. The outdoor lawn was breathtaking at night!"</p>
+        <div class="reviewer">
+          <div class="rev-av">R</div>
+          <div><div class="rev-name">Ramesh Gupta</div><div class="rev-occ">Wedding · December 2024</div></div>
+        </div>
+      </div>
+
+      <div class="rev-card">
+        <div class="stars">★★★★☆</div>
+        <p class="rev-text">"The restaurant food has that authentic home-cooked taste. Whenever family visits, this is the only place I bring them. Dal makhani and shahi paneer are outstanding. Service is very prompt!"</p>
+        <div class="reviewer">
+          <div class="rev-av">P</div>
+          <div><div class="rev-name">Priya Sharma</div><div class="rev-occ">Restaurant Visit · March 2025</div></div>
+        </div>
+      </div>
+
+      <div class="rev-card">
+        <div class="stars">★★★★★</div>
+        <p class="rev-text">"We booked rooms for our family function. Everything was clean, AC worked perfectly, and the staff was extremely cooperative. Free breakfast was a bonus. We will definitely return next time!"</p>
+        <div class="reviewer">
+          <div class="rev-av">A</div>
+          <div><div class="rev-name">Anil Verma</div><div class="rev-occ">Room Stay · February 2025</div></div>
+        </div>
+      </div>
+
+      <div class="rev-card">
+        <div class="stars">★★★★★</div>
+        <p class="rev-text">"Professional team, beautiful venue. We stayed three full days for our wedding — food, accommodation, everything was perfect. 700+ guests attended and not a single complaint. Guests are still talking about it!"</p>
+        <div class="reviewer">
+          <div class="rev-av">N</div>
+          <div><div class="rev-name">Neeraj &amp; Kavita</div><div class="rev-occ">Wedding · November 2024</div></div>
+        </div>
+      </div>
+
+    </div><!-- /.rev-track -->
+  </div><!-- /.rev-slider -->
+
+  <!-- Controls: prev — dots — next -->
+  <div class="rev-ctrl">
+    <button class="rev-btn" id="revPrev" aria-label="Previous review"><i class="fas fa-chevron-left"></i></button>
+    <div class="rev-dots" id="revDots"></div>
+    <button class="rev-btn" id="revNext" aria-label="Next review"><i class="fas fa-chevron-right"></i></button>
+  </div>
+
+</section>
+
+<div class="sec-divider"></div>
+
+<!-- ============================================================
+     CONTACT — Left dark panel + Right white form
+     ============================================================ -->
+<section id="contact" class="mandala-bg">
+  <div style="max-width:1100px;margin:0 auto;padding:0 3rem">
+    <h2 class="stitle reveal">Contact Us</h2>
+    <p class="ssub reveal rd1">We Are Here For You</p>
+  </div>
+  <div class="contact-wrap">
+
+    <!-- LEFT: dark info panel -->
+    <div class="cinfo-panel reveal">
+      <h3>Get In Touch</h3>
+      <p>For wedding bookings, restaurant reservations, or room enquiries — call us or fill out the form. Our team is available around the clock.</p>
+
+      <div class="cdet">
+        <div class="cdet-ico"><i class="fas fa-phone"></i></div>
+        <div class="cdet-txt">
+          <strong>Call / WhatsApp</strong>
+          <span>+91 97406 55459</span>
+        </div>
+      </div>
+      <div class="cdet">
+        <div class="cdet-ico"><i class="fas fa-envelope"></i></div>
+        <div class="cdet-txt">
+          <strong>Email</strong>
+          <span>info@shivgardenresort.com</span>
+        </div>
+      </div>
+      <div class="cdet">
+        <div class="cdet-ico"><i class="fas fa-map-marker-alt"></i></div>
+        <div class="cdet-txt">
+          <strong>Address</strong>
+          <span>Plot No. 82, Chakka Shahpur, NH-57<br>Opposite Reliance Petrol Pump<br>Lalsahpur, Darbhanga — Bihar 846005</span>
+        </div>
+      </div>
+      <div class="cdet">
+        <div class="cdet-ico"><i class="fas fa-clock"></i></div>
+        <div class="cdet-txt">
+          <strong>Opening Hours</strong>
+          <span>Restaurant: 7 AM – 11 PM (Daily)<br>Office: 9 AM – 8 PM</span>
+        </div>
+      </div>
+
+      <!-- SOCIAL LINKS — Replace with your real page URLs -->
+      <div class="socials">
+        <a href="https://www.facebook.com/ShivGardenResortDarbhanga" class="soc-lnk" aria-label="Facebook"  target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/shivgardenresort"          class="soc-lnk" aria-label="Instagram" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.youtube.com/@shivgardenresort"           class="soc-lnk" aria-label="YouTube"   target="_blank" rel="noopener"><i class="fab fa-youtube"></i></a>
+        <a href="https://wa.me/919740655459"                          class="soc-lnk" aria-label="WhatsApp"  target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div><!-- /.cinfo-panel -->
+
+    <!-- RIGHT: white form -->
+    <div class="cform-panel reveal rd2">
+      <h3>Send an Enquiry</h3>
+      <form id="cForm" novalidate>
+        <div class="frow">
+          <div class="fgrp"><label for="fn">First Name *</label><input type="text" id="fn" placeholder="Ramesh" required/></div>
+          <div class="fgrp"><label for="ln">Last Name</label><input type="text" id="ln" placeholder="Gupta"/></div>
+        </div>
+        <div class="fgrp"><label for="ph">Mobile Number *</label><input type="tel" id="ph" placeholder="+91 97406 55459" required/></div>
+        <div class="fgrp"><label for="em">Email (Optional)</label><input type="email" id="em" placeholder="your@email.com"/></div>
+        <div class="fgrp">
+          <label for="occ">What Do You Need? *</label>
+          <select id="occ" required>
+            <option value="" disabled selected>Select a service...</option>
+            <option value="wedding">Wedding / Shadi Booking</option>
+            <option value="restaurant">Restaurant Reservation</option>
+            <option value="room">Room Booking</option>
+            <option value="event">Other Event</option>
+            <option value="enquiry">General Enquiry</option>
+          </select>
+        </div>
+        <div class="fgrp"><label for="dt">Event Date</label><input type="date" id="dt"/></div>
+        <div class="fgrp"><label for="msg">Your Message</label><textarea id="msg" placeholder="Tell us about your requirements..."></textarea></div>
+        <button type="submit" class="btn-sub"><i class="fas fa-paper-plane" style="margin-right:.5rem"></i>Send Message</button>
+      </form>
+      <div id="fOk" style="display:none;text-align:center;padding:2.5rem">
+        <div style="font-size:2.5rem;margin-bottom:1rem">✅</div>
+        <h4 style="font-family:var(--fh);font-size:1.5rem;color:var(--brn);margin-bottom:.5rem">Thank You!</h4>
+        <p style="color:var(--mid)">Your message has been received. We will contact you shortly.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer>
+  <div class="ft-grid">
+    <div>
+      <span class="ft-brand">Shiv Garden Resort</span>
+      <span style="font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(196,146,58,.3);display:block;margin-bottom:1rem">Darbhanga, Bihar</span>
+      <p class="ft-desc">A place where every moment becomes special. Royal hospitality, authentic food, and unforgettable weddings — that is the promise of Shiv Garden Resort.</p>
+      <div class="ft-soc">
+        <a href="https://www.facebook.com/ShivGardenResortDarbhanga" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/shivgardenresort"          target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.youtube.com/@shivgardenresort"           target="_blank" rel="noopener"><i class="fab fa-youtube"></i></a>
+        <a href="https://wa.me/919740655459"                          target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+    <div class="ft-col">
+      <h4>Quick Links</h4>
+      <ul class="ft-links">
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="ft-col">
+      <h4>Services</h4>
+      <ul class="ft-links">
+        <li><a href="#services">Restaurant</a></li>
+        <li><a href="#services">Wedding Hall</a></li>
+        <li><a href="#services">Luxury Rooms</a></li>
+        <li><a href="#services">Event Management</a></li>
+        <li><a href="#contact">Outdoor Catering</a></li>
+      </ul>
+    </div>
+    <div class="ft-col">
+      <h4>Contact</h4>
+      <ul class="ft-links">
+        <li><a href="tel:+919740655459">+91 97406 55459</a></li>
+        <li><a href="mailto:info@shivgardenresort.com">info@shivgardenresort.com</a></li>
+        <li><a href="#contact">NH-57, Lalsahpur</a></li>
+        <li><a href="#contact">Darbhanga, Bihar 846005</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="ft-bot">
+    <span>© 2025 Shiv Garden Resort. All Rights Reserved.</span>
+    <span style="color:rgba(196,146,58,.25)">Made with ❤️ for Darbhanga</span>
+  </div>
+</footer>
+
+<!-- Floating WhatsApp -->
+<a href="https://wa.me/919740655459" class="wa-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<!-- ============================================================
+     JAVASCRIPT
+     ============================================================ -->
+<script>
+/* ---- 1. NAVBAR SCROLL ---- */
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', window.scrollY > 60));
+
+/* ---- 2. HAMBURGER ---- */
+const hamBtn  = document.getElementById('hamBtn');
+const mobMenu = document.getElementById('mobMenu');
+hamBtn.addEventListener('click', () => {
+  const open = mobMenu.classList.toggle('open');
+  hamBtn.classList.toggle('open', open);
+  hamBtn.setAttribute('aria-expanded', open);
+  document.body.style.overflow = open ? 'hidden' : '';
+});
+function closeNav() {
+  mobMenu.classList.remove('open');
+  hamBtn.classList.remove('open');
+  hamBtn.setAttribute('aria-expanded','false');
+  document.body.style.overflow = '';
+}
+
+/* ---- 3. SCROLL REVEAL ---- */
+const revEls = document.querySelectorAll('.reveal');
+new IntersectionObserver(entries => {
+  entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('visible'); } });
+},{threshold:.1}).observe || revEls.forEach(el => {
+  new IntersectionObserver(([e]) => {
+    if(e.isIntersecting){ e.target.classList.add('visible'); }
+  },{threshold:.1}).observe(el);
+});
+// Correct observer
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
+},{threshold:.1});
+revEls.forEach(el => obs.observe(el));
+
+/* ---- 4. ACTIVE NAV HIGHLIGHT ---- */
+const sections = document.querySelectorAll('section[id]');
+const navAs    = document.querySelectorAll('.nav-links a');
+window.addEventListener('scroll', () => {
+  let cur = '';
+  sections.forEach(s => { if(window.scrollY >= s.offsetTop - 120) cur = s.id; });
+  navAs.forEach(a => {
+    a.style.color = (a.getAttribute('href') === '#' + cur) ? 'var(--glt)' : '';
+  });
+});
+
+/* ---- 5. GALLERY SLIDER ---- */
+(function() {
+  const track    = document.getElementById('galTrack');
+  const slides   = track.querySelectorAll('.gal-slide');
+  const dotsWrap = document.getElementById('galDots');
+  const thumbWrap= document.getElementById('galThumbs');
+  const prevBtn  = document.getElementById('galPrev');
+  const nextBtn  = document.getElementById('galNext');
+  const total    = slides.length;
+  let cur = 0, timer;
+
+  /* Build dots */
+  slides.forEach((_,i) => {
+    const d = document.createElement('button');
+    d.className = 'gal-dot' + (i===0?' active':'');
+    d.setAttribute('aria-label','Go to slide '+(i+1));
+    d.onclick = () => goTo(i);
+    dotsWrap.appendChild(d);
+  });
+
+  /* Build thumbnails using same images */
+  slides.forEach((slide,i) => {
+    const img = slide.querySelector('img');
+    const t = document.createElement('div');
+    t.className = 'gal-thumb' + (i===0?' active':'');
+    const ti = document.createElement('img');
+    ti.src = img ? img.src : '';
+    ti.alt = img ? img.alt : '';
+    t.appendChild(ti);
+    t.onclick = () => goTo(i);
+    thumbWrap.appendChild(t);
+  });
+
+  function goTo(n) {
+    cur = (n + total) % total;
+    track.style.transform = 'translateX(-' + (cur * 100) + '%)';
+    /* Update dots */
+    dotsWrap.querySelectorAll('.gal-dot').forEach((d,i) => d.classList.toggle('active', i===cur));
+    /* Update thumbs */
+    thumbWrap.querySelectorAll('.gal-thumb').forEach((t,i) => t.classList.toggle('active', i===cur));
+    resetTimer();
+  }
+
+  function resetTimer() {
+    clearInterval(timer);
+    timer = setInterval(() => goTo(cur + 1), 4000); /* Auto-advance every 4s */
+  }
+
+  prevBtn.onclick = () => goTo(cur - 1);
+  nextBtn.onclick = () => goTo(cur + 1);
+
+  /* Pause on hover */
+  track.addEventListener('mouseenter', () => clearInterval(timer));
+  track.addEventListener('mouseleave', resetTimer);
+
+  resetTimer(); /* Start auto-play */
+})();
+
+/* ---- 6. REVIEWS CAROUSEL ---- */
+(function() {
+  const track    = document.getElementById('revTrack');
+  const cards    = track.querySelectorAll('.rev-card');
+  const dotsWrap = document.getElementById('revDots');
+  const prevBtn  = document.getElementById('revPrev');
+  const nextBtn  = document.getElementById('revNext');
+
+  /* Visible cards per view (responsive) */
+  function perView() { return window.innerWidth < 768 ? 1 : window.innerWidth < 1024 ? 2 : 3; }
+
+  const total = cards.length;
+  let cur = 0, timer;
+  const gap = 24; /* 1.5rem gap in px */
+
+  /* Build dots — one per "page" */
+  function numPages() { return Math.ceil(total / perView()); }
+
+  function buildDots() {
+    dotsWrap.innerHTML = '';
+    for(let i = 0; i < numPages(); i++) {
+      const d = document.createElement('button');
+      d.className = 'rev-dot' + (i===0?' active':'');
+      d.onclick = () => goTo(i);
+      dotsWrap.appendChild(d);
+    }
+  }
+
+  function goTo(page) {
+    const pv = perView();
+    cur = Math.max(0, Math.min(page, numPages() - 1));
+    /* Each card width is (slider-width - gaps) / perView */
+    const sliderW = track.parentElement.offsetWidth;
+    const cardW   = (sliderW - gap * (pv - 1)) / pv;
+    const offset  = cur * (cardW + gap) * pv;
+    track.style.transform = 'translateX(-' + offset + 'px)';
+    /* Set fixed card widths */
+    cards.forEach(c => { c.style.minWidth = cardW + 'px'; });
+    dotsWrap.querySelectorAll('.rev-dot').forEach((d,i) => d.classList.toggle('active', i===cur));
+    resetTimer();
+  }
+
+  function resetTimer() {
+    clearInterval(timer);
+    timer = setInterval(() => goTo((cur + 1) % numPages()), 5000);
+  }
+
+  prevBtn.onclick = () => goTo(cur - 1);
+  nextBtn.onclick = () => goTo(cur + 1);
+  track.addEventListener('mouseenter', () => clearInterval(timer));
+  track.addEventListener('mouseleave', resetTimer);
+
+  /* Init + resize */
+  function init() { buildDots(); goTo(0); }
+  init();
+  window.addEventListener('resize', init);
+})();
+
+/* ---- 7. CONTACT FORM ---- */
+const cForm = document.getElementById('cForm');
+const fOk   = document.getElementById('fOk');
+cForm.addEventListener('submit', e => {
+  e.preventDefault();
+  const name = document.getElementById('fn').value.trim();
+  const ph   = document.getElementById('ph').value.trim();
+  const occ  = document.getElementById('occ').value;
+  if(!name){ alert('Please enter your first name.'); return; }
+  if(!ph)  { alert('Please enter your mobile number.'); return; }
+  if(!occ) { alert('Please select a service.'); return; }
+
+  /* Build mailto link to send to Gmail */
+  const GMAIL = 'yourgmail@gmail.com'; /* ← CHANGE THIS to your Gmail */
+  const ln    = document.getElementById('ln').value.trim();
+  const em    = document.getElementById('em').value.trim();
+  const dt    = document.getElementById('dt').value;
+  const msg   = document.getElementById('msg').value.trim();
+  const subj  = encodeURIComponent('New Enquiry — Shiv Garden Resort');
+  const body  = encodeURIComponent(
+    'New Website Enquiry\n===================\n' +
+    'Name    : ' + name + (ln?' '+ln:'') + '\n' +
+    'Phone   : ' + ph   + '\n' +
+    'Email   : ' + (em||'Not provided') + '\n' +
+    'Service : ' + occ  + '\n' +
+    'Date    : ' + (dt||'Not specified') + '\n' +
+    'Message : ' + (msg||'None') + '\n' +
+    '===================\nFrom: Shiv Garden Resort Website'
+  );
+  window.open('mailto:' + GMAIL + '?subject=' + subj + '&body=' + body, '_blank');
+
+  cForm.style.display = 'none';
+  fOk.style.display   = 'block';
+  setTimeout(() => { cForm.reset(); cForm.style.display='block'; fOk.style.display='none'; }, 6000);
+});
+
+/* ---- 8. REGISTRATION POPUP ---- */
+const GMAIL_REG = 'yourgmail@gmail.com'; /* ← CHANGE THIS */
+window.addEventListener('load', () => setTimeout(() => {
+  document.getElementById('regPopup').style.display = 'flex';
+}, 1200));
+
+function closePopup() { document.getElementById('regPopup').style.display = 'none'; }
+
+document.getElementById('regForm').addEventListener('submit', e => {
+  e.preventDefault();
+  const name  = document.getElementById('rName').value.trim();
+  const phone = document.getElementById('rPhone').value.trim();
+  const email = document.getElementById('rEmail').value.trim();
+  if(!name) { alert('Please enter your name.'); return; }
+  if(!phone){ alert('Please enter your mobile number.'); return; }
+
+  const subj = encodeURIComponent('New Registration — Shiv Garden Resort');
+  const body = encodeURIComponent(
+    'New Visitor Registration\n========================\n' +
+    'Name  : ' + name  + '\n' +
+    'Phone : ' + phone + '\n' +
+    'Email : ' + (email||'Not provided') + '\n' +
+    '========================\nFrom: Shiv Garden Resort Website'
+  );
+  window.open('mailto:' + GMAIL_REG + '?subject=' + subj + '&body=' + body, '_blank');
+
+  document.getElementById('regFormWrap').classList.add('hidden');
+  document.getElementById('regSuccess').classList.remove('hidden');
+});
+
+/* ---- 9. COOKIE BAR ---- */
+(function() {
+  const bar = document.getElementById('cookieBar');
+  try {
+    if(localStorage.getItem('cookieConsent')) bar.style.display = 'none';
+  } catch(e) {}
+})();
+function acceptCookies()  { try{ localStorage.setItem('cookieConsent','accepted');  }catch(e){} document.getElementById('cookieBar').style.display='none'; }
+function declineCookies() { try{ localStorage.setItem('cookieConsent','declined'); }catch(e){} document.getElementById('cookieBar').style.display='none'; }
+</script>
+
+</body>
+</html>
